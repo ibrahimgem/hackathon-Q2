@@ -2,20 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.navContainer {
+    @apply max-w-[1440px] m-auto flex justify-between items-center h-[124px] border-b self-center
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.navSection {
+    @apply flex justify-start px-6 py-4 items-center gap-5
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.logo {
+    @apply mx-10 text-blue-600 font-semibold text-3xl
+}
+
+.search {
+   @apply flex items-center border max-w-full rounded-3xl px-4 py-2
+}
+
+.menu {
+    @apply flex justify-end px-10 py-4 gap-4
 }
