@@ -3,8 +3,8 @@ import Content from "./components/content";
 
 export default function Home() {
   return (
-    <div className="max-w-[1440px]">
-      <Content/>
+    <div className="bg-[#F6F7F9] max-w-[1440px] m-auto">
+      {/* <Content/> */}
     </div>
   );
 }
