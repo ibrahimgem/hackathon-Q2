@@ -1,4 +1,3 @@
-import React from "react";
 import { carData } from "../data/cars";
 import CarCard from "./card";
 
@@ -14,7 +13,8 @@ export default function Catalogue() {
                     price={car.price}
                     fuelTank={car.fuelTank}
                     transmission={car.transmission}
-                    capacity={car.capacity} />
+                    capacity={car.capacity} 
+                    like={car.like} />
             ))}
         </div>
     )

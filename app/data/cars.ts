@@ -1,55 +1,148 @@
-import KoenigseggSVG from "@/public/cars/Koenigsegg.svg"
-import NissanGTRSVG from "@/public/cars/nissanGTR.svg"
-import RollsRoyceSVG from "@/public/cars/rollsRoyce.svg"
-import RedHeart from "@/public/Like-Filled.svg"
-import WhiteHeart from "@/public/Like.svg"
+import Koenigsegg from "@/public/cars/Koenigsegg.svg";
+import NissanGTR from "@/public/cars/nissanGTR.svg";
+import RollsRoyce from "@/public/cars/rollsRoyce.svg";
+import AllNewRush from "@/public/cars/allnewrush.svg"
+import AllNewTerios from "@/public/cars/allnewterios.svg"
+import CrV from "@/public/cars/cr-v.svg"
+import CrVB from "@/public/cars/cr-vb.svg"
+import MGZXExcite from "@/public/cars/mgzxexcite.svg"
+import MGZXExclusice from "@/public/cars/mgzxexclusice.svg"
+import NewMGZSW from "@/public/cars/newmgzs.svg"
+import NewMGZSG from "@/public/cars/newmgzsg.svg"
+import RedHeart from "@/public/Like-Filled.svg";
+import WhiteHeart from "@/public/Like.svg";
 
 export const carData = [
-    {
-        id: 1,
-        name: "Koenigsegg",
-        type: "Sport",
-        image: KoenigseggSVG,
-        price: 99.00,
-        fuelTank: 90,
-        transmission: "Manual",
-        capacity: "2 People",
-        like: RedHeart
-
-    },
-    {
-        id: 2,
-        name: "NissanGT-R",
-        type: "Sport",
-        image: NissanGTRSVG,
-        price: 80.00,
-        fuelTank: 80,
-        transmission: "Manual",
-        capacity: "2 People",
-        like: WhiteHeart
-
-    },
-    {
-        id: 3,
-        name: "Rolls-Royce",
-        type: "Sedan",
-        image: RollsRoyceSVG,
-        price: 96.00,
-        fuelTank: 70,
-        transmission: "Manual",
-        capacity: "4 People",
-        like: RedHeart
-    },
-    {
-        id: 4,
-        name: "NissanGT-R",
-        type: "Sport",
-        image: NissanGTRSVG,
-        price: 80.00,
-        fuelTank: 80,
-        transmission: "Manual",
-        capacity: "2 People",
-        like: WhiteHeart
-
-    },
-]
+  {
+    id: 1,
+    name: "Koenigsegg",
+    type: "Sport",
+    image: Koenigsegg,
+    price: 99.0,
+    fuelTank: 90,
+    transmission: "Manual",
+    capacity: 2,
+    like: RedHeart,
+  },
+  {
+    id: 2,
+    name: "NissanGT-R",
+    type: "Sport",
+    image: NissanGTR,
+    price: 80.0,
+    fuelTank: 80,
+    transmission: "Manual",
+    capacity: 2,
+    like: WhiteHeart,
+  },
+  {
+    id: 3,
+    name: "Rolls-Royce",
+    type: "Sedan",
+    image: RollsRoyce,
+    price: 96.0,
+    fuelTank: 70,
+    transmission: "Manual",
+    capacity: 4,
+    like: RedHeart,
+  },
+  {
+    id: 4,
+    name: "NissanGT-R",
+    type: "Sport",
+    image: NissanGTR,
+    price: 80.0,
+    fuelTank: 80,
+    transmission: "Manual",
+    capacity: 2,
+    like: WhiteHeart,
+  },
+  {
+    id: 5,
+    name: "All New Rush",
+    type: "SUV",
+    image: AllNewRush,
+    price: 72.0,
+    fuelTank: 70,
+    transmission: "Manual",
+    capacity: 6,
+    like: WhiteHeart,
+  },
+  {
+    id: 6,
+    name: "CR-V",
+    type: "SUV",
+    image: CrV,
+    price: 80.0,
+    fuelTank: 80,
+    transmission: "Manual",
+    capacity: 6,
+    like: RedHeart,
+  },
+  {
+    id: 7,
+    name: "All New Terios",
+    type: "SUV",
+    image: AllNewTerios,
+    price: 74.0,
+    fuelTank: 90,
+    transmission: "Manual",
+    capacity: 4,
+    like: WhiteHeart,
+  },
+  {
+    id: 8,
+    name: "CR-V",
+    type: "Suv",
+    image: CrVB,
+    price: 80.0,
+    fuelTank: 80,
+    transmission: "Manual",
+    capacity: 6,
+    like: RedHeart,
+  },
+  {
+    id: 9,
+    name: "MG ZX Exclusice",
+    type: "Hatchback",
+    image: MGZXExclusice,
+    price: 76.0,
+    fuelTank: 80,
+    transmission: "Manual",
+    capacity: 4,
+    like: RedHeart,
+  },
+  {
+    id: 10,
+    name: "New MG ZS",
+    type: "SUV",
+    image: NewMGZSW,
+    price: 80.0,
+    fuelTank: 80,
+    transmission: "Manual",
+    capacity: 6,
+    like: WhiteHeart,
+  },
+  {
+    id: 11,
+    name: "MG ZX Excite",
+    type: "Hatchback",
+    image: MGZXExcite,
+    price: 74.0,
+    fuelTank: 90,
+    transmission: "Manual",
+    capacity: 4,
+    like: RedHeart,
+  },
+  {
+    id: 12,
+    name: "New MG ZS",
+    type: "SUV",
+    image: NewMGZSG,
+    price: 80.0,
+    fuelTank: 80,
+    transmission: "Manual",
+    capacity: 4,
+    like: WhiteHeart,
+  },
+];
