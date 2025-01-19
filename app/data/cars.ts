@@ -1,6 +1,8 @@
 import KoenigseggSVG from "@/public/cars/Koenigsegg.svg"
 import NissanGTRSVG from "@/public/cars/nissanGTR.svg"
 import RollsRoyceSVG from "@/public/cars/rollsRoyce.svg"
+import RedHeart from "@/public/Like-Filled.svg"
+import WhiteHeart from "@/public/Like.svg"
 
 export const carData = [
     {
@@ -12,6 +14,7 @@ export const carData = [
         fuelTank: 90,
         transmission: "Manual",
         capacity: "2 People",
+        like: RedHeart
 
     },
     {
@@ -23,6 +26,7 @@ export const carData = [
         fuelTank: 80,
         transmission: "Manual",
         capacity: "2 People",
+        like: WhiteHeart
 
     },
     {
@@ -33,8 +37,8 @@ export const carData = [
         price: 96.00,
         fuelTank: 70,
         transmission: "Manual",
-        capacity: "4 People"
-
+        capacity: "4 People",
+        like: RedHeart
     },
     {
         id: 4,
@@ -44,7 +48,8 @@ export const carData = [
         price: 80.00,
         fuelTank: 80,
         transmission: "Manual",
-        capacity: "2 People"
+        capacity: "2 People",
+        like: WhiteHeart
 
     },
 ]

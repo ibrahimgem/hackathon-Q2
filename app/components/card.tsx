@@ -11,10 +11,10 @@ type CarProps = {
     fuelTank: number;
     transmission: string;
     capacity: string;
-    heart: StaticImageData;
+    like: StaticImageData;
 }
 
-const Card: React.FC<CarProps> = ({ name, price, type, image, fuelTank, transmission, capacity, heart }) => {
+const Card: React.FC<CarProps> = ({ name, price, type, image, fuelTank, transmission, capacity, like }) => {
     return (
         <div className="w-[304px] h-[388px] bg-white rounded-[10px]">
             <div className="px-6 pt-6 flex justify-between">
@@ -28,11 +28,11 @@ const Card: React.FC<CarProps> = ({ name, price, type, image, fuelTank, transmis
                         </svg>
                     </div>
                     {/* Show Dynamically Red Heart */}
-                    {/* <div className="absolute right-1 z-10">
+                    {/* <div className=" right-1 z-10">
                         <Image
-                            src={heart}
-                            width={24}
-                            height={24}
+                            src={like}
+                            width={100}
+                            height={100}
                             alt=""
                         />
                     </div> */}
