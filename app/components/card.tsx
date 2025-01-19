@@ -1,32 +1,50 @@
 import React from "react";
 import Image from "next/image";
-import Car from "@/public/car.svg"
 import Shadow from "@/public/shadow.svg"
+import { StaticImageData } from "next/image";
 
 type CarProps = {
     name: string;
-    image: React.ComponentType;
+    image: StaticImageData;
+    type: string;
     price: number;
     fuelTank: number;
     transmission: string;
     capacity: string;
+    heart: StaticImageData;
 }
 
-const Card: React.FC<CarProps> = ({ name, price, fuelTank, transmission, capacity }) => {
+const Card: React.FC<CarProps> = ({ name, price, type, image, fuelTank, transmission, capacity, heart }) => {
     return (
         <div className="w-[304px] h-[388px] bg-white rounded-[10px]">
             <div className="px-6 pt-6 flex justify-between">
                 <div className="text-[20px] font-bold">
                     {name}
                 </div>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.44 3.09961C14.63 3.09961 13.01 3.97961 12 5.32961C10.99 3.97961 9.37 3.09961 7.56 3.09961C4.49 3.09961 2 5.59961 2 8.68961C2 9.87961 2.19 10.9796 2.52 11.9996C4.1 16.9996 8.97 19.9896 11.38 20.8096C11.72 20.9296 12.28 20.9296 12.62 20.8096C15.03 19.9896 19.9 16.9996 21.48 11.9996C21.81 10.9796 22 9.87961 22 8.68961C22 5.59961 19.51 3.09961 16.44 3.09961Z" fill="#ED3F3F" />
-                </svg>
+                <div className="relative">
+                    <div className="absolute right-1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.62 20.8096C12.28 20.9296 11.72 20.9296 11.38 20.8096C8.48 19.8196 2 15.6896 2 8.68961C2 5.59961 4.49 3.09961 7.56 3.09961C9.38 3.09961 10.99 3.97961 12 5.33961C13.01 3.97961 14.63 3.09961 16.44 3.09961C19.51 3.09961 22 5.59961 22 8.68961C22 15.6896 15.52 19.8196 12.62 20.8096Z" stroke="#90A3BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    {/* Show Dynamically Red Heart */}
+                    {/* <div className="absolute right-1 z-10">
+                        <Image
+                            src={heart}
+                            width={24}
+                            height={24}
+                            alt=""
+                        />
+                    </div> */}
+                </div>
+
             </div>
-            <div className="text-gray-400 px-6 font-bold pt-1">Sport</div>
+            <div className="text-gray-400 px-6 font-bold pt-1">{type}</div>
             <div className="flex justify-center">
+
+
                 <Image
-                    src={Car}
+                    src={image}
                     width={232}
                     height={72}
                     alt="car"
@@ -68,13 +86,13 @@ const Card: React.FC<CarProps> = ({ name, price, fuelTank, transmission, capacit
                         <path d="M21.9902 16.5904C21.9102 17.5604 21.2902 18.4004 20.2502 18.9704C19.2502 19.5204 17.9902 19.7804 16.7402 19.7504C17.4602 19.1004 17.8802 18.2904 17.9602 17.4304C18.0602 16.1904 17.4702 15.0004 16.2902 14.0504C15.6202 13.5204 14.8402 13.1004 13.9902 12.7904C16.2002 12.1504 18.9802 12.5804 20.6902 13.9604C21.6102 14.7004 22.0802 15.6304 21.9902 16.5904Z" fill="#90A3BF" />
                     </svg>
 
-                    <span className="px-1 text-gray-400">6 People</span>
+                    <span className="px-1 text-gray-400">{capacity}</span>
                 </div>
 
             </div>
-            <div className="flex gap-6 items-center">
+            <div className="flex gap-12 items-center">
                 <div className="text-[14px] text-gray-400 font-bold m-6">
-                   <span className="text-[20px] text-black">$72.00/ </span>day
+                    <span className="text-[20px] text-black">${price}/ </span>day
                 </div>
                 <button className="w-[110px] h-[40px] bg-[#3563E9] text-white rounded-[4px]">Rent Now</button>
             </div>
