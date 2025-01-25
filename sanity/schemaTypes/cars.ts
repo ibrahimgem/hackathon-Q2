@@ -1,44 +1,74 @@
 import { defineField, defineType } from "sanity";
 
-export const cars = defineType({
-  name: "cars",
-  title: "Cars",
-  type: "document",
+export const cars = {
+  name: 'car',
+  type: 'document',
+  title: 'Car',
   fields: [
-    defineField({
-      name: "name",
-      title: "Car Name",
-      type: "string",
-    }),
-    defineField({
-      name: "type",
-      title: "Car Type",
-      type: "string",
-    }),
-    defineField({
-      name: "image",
-      title: "Car Image",
-      type: "image",
-    }),
-    defineField({
-      name: "price",
-      title: "Rental Price",
-      type: "string",
-    }),
-    defineField({
-      name: "fuelCapacity",
-      title: "Fuel Capacity",
-      type: "number",
-    }),
-    defineField({
-      name: "transmission",
-      title: "Transmission",
-      type: "string",
-    }),
-    defineField({
-      name: "capacity",
-      title: "Car Capacity",
-      type: "string",
-    }),
+    {
+      name: 'name',
+      type: 'string',
+      title: 'Car Name',
+    },
+    {
+      name: 'brand',
+      type: 'string',
+      title: 'Brand',
+      description: 'Brand of the car (e.g., Nissan, Tesla, etc.)',
+    },
+    {
+      name: 'type',
+      type: 'string',
+      title: 'Car Type',
+      description: 'Type of the car (e.g., Sport, Sedan, SUV, etc.)',
+    },
+    {
+      name: 'fuelCapacity',
+      type: 'string',
+      title: 'Fuel Capacity',
+      description: 'Fuel capacity or battery capacity (e.g., 90L, 100kWh)',
+    },
+    {
+      name: 'transmission',
+      type: 'string',
+      title: 'Transmission',
+      description: 'Type of transmission (e.g., Manual, Automatic)',
+    },
+    {
+      name: 'seatingCapacity',
+      type: 'string',
+      title: 'Seating Capacity',
+      description: 'Number of seats (e.g., 2 People, 4 seats)',
+    },
+    {
+      name: 'pricePerDay',
+      type: 'string',
+      title: 'Price Per Day',
+      description: 'Rental price per day',
+    },
+    {
+      name: 'originalPrice',
+      type: 'string',
+      title: 'Original Price',
+      description: 'Original price before discount (if applicable)',
+    },
+    {
+      name: 'tags',
+      type: 'array',
+      title: 'Tags',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags',
+      },
+      description: 'Tags for categorization (e.g., popular, recommended)',
+    },
+    {
+      name: 'image',
+      type: 'image',
+      title: 'Car Image',
+      options: {
+        hotspot: true
+      }
+    }
   ],
-});
+};

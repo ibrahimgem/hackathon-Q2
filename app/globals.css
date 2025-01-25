@@ -11,7 +11,7 @@
 }
 
 .logo {
-    @apply mx-10 text-blue-600 font-semibold text-3xl
+    @apply mx-10 text-blue-600 font-semibold text-3xl font-bold
 }
 
 .search {

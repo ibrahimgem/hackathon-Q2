@@ -1,6 +1,8 @@
 import Image from "next/image";
-import Shadow from "@/public/shadow.svg"
+import Shadow from "@/public/shadow.svg";
 import { StaticImageData } from "next/image";
+import { client } from "@/sanity/lib/client";
+
 
 type CarProps = {
     name: string;
