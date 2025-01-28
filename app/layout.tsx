@@ -28,12 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`$ ${jakarta.className} antialiased`}
-      >
-        <Navbar />
+        className={`$ ${jakarta.className} antialiased`}> 
+        <Navbar />       
         {children}
         <Footer />
-
       </body>
     </html>
   );

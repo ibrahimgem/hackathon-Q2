@@ -2,42 +2,50 @@ import Image from "next/image";
 import Shadow from "@/public/shadow.svg";
 import { StaticImageData } from "next/image";
 import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 
 
-type CarProps = {
+
+type Car = {
     name: string;
-    image: StaticImageData;
+    brand: string;
     type: string;
-    price: number;
-    fuelTank: number;
+    fuelCapacity: string;
     transmission: string;
-    capacity: number;
-    like: StaticImageData;
+    seatingCapacity: string;
+    pricePerDay: string;
+    originalPrice: string;
+    tags: [];
+    image: StaticImageData;
 }
 
-const Card: React.FC<CarProps> = ({ name, price, type, image, fuelTank, transmission, capacity, like }) => {
+const Card: React.FC<Car> = ({ name, brand, type, fuelCapacity, transmission, seatingCapacity, pricePerDay, originalPrice, tags, image }) => {
     return (
-        <div className="w-[304px] h-[388px] bg-white rounded-[10px]">
+        <div className="w-[304px] h-[370px] bg-white rounded-[10px]">
             <div className="px-6 pt-6 flex justify-between">
                 <div className="text-[20px] font-bold">
                     {name}
                 </div>
-                <Image
+                {/* <Image
                     src={like}
                     width={24}
                     height={24}
                     alt="fav"
-                />
+                /> */}
             </div>
             <div className="text-gray-400 px-6 font-bold pt-1">{type}</div>
             <div className="flex justify-center my-14 relative">
-                <Image
+                {/* <Image
                     src={image}
                     width={232}
                     height={72}
                     alt="car"
 
-                />
+                /> */}
+                {image && (
+                    <img src={urlFor(image).width(240).url()}
+                    alt="Sanity image"/>
+                )}
 
                 <Image
                     src={Shadow}
@@ -52,7 +60,7 @@ const Card: React.FC<CarProps> = ({ name, price, type, image, fuelTank, transmis
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.34 9.33L20.34 8.33C19.97 8.15 19.51 8.29 19.33 8.66C19.14 9.04 19.29 9.49 19.66 9.67L21.25 10.46V15.25L17.5 15.26V5C17.5 3 16.16 2 14.5 2H6.5C4.84 2 3.5 3 3.5 5V21.25H2C1.59 21.25 1.25 21.59 1.25 22C1.25 22.41 1.59 22.75 2 22.75H19C19.41 22.75 19.75 22.41 19.75 22C19.75 21.59 19.41 21.25 19 21.25H17.5V16.76L22 16.75C22.42 16.75 22.75 16.41 22.75 16V10C22.75 9.72 22.59 9.46 22.34 9.33ZM6 6.89C6 5.5 6.85 5 7.89 5H13.12C14.15 5 15 5.5 15 6.89V8.12C15 9.5 14.15 10 13.11 10H7.89C6.85 10 6 9.5 6 8.11V6.89ZM6.5 12.25H9.5C9.91 12.25 10.25 12.59 10.25 13C10.25 13.41 9.91 13.75 9.5 13.75H6.5C6.09 13.75 5.75 13.41 5.75 13C5.75 12.59 6.09 12.25 6.5 12.25Z" fill="#90A3BF" />
                     </svg>
-                    <span className="px-1 text-gray-400">{fuelTank}L</span>
+                    <span className="px-1 text-gray-400">{fuelCapacity}</span>
                 </div>
                 <div className="flex items-center">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,13 +82,13 @@ const Card: React.FC<CarProps> = ({ name, price, type, image, fuelTank, transmis
                         <path d="M21.9902 16.5904C21.9102 17.5604 21.2902 18.4004 20.2502 18.9704C19.2502 19.5204 17.9902 19.7804 16.7402 19.7504C17.4602 19.1004 17.8802 18.2904 17.9602 17.4304C18.0602 16.1904 17.4702 15.0004 16.2902 14.0504C15.6202 13.5204 14.8402 13.1004 13.9902 12.7904C16.2002 12.1504 18.9802 12.5804 20.6902 13.9604C21.6102 14.7004 22.0802 15.6304 21.9902 16.5904Z" fill="#90A3BF" />
                     </svg>
 
-                    <span className="px-1 text-gray-400">{capacity} People</span>
+                    <span className="px-1 text-gray-400">{seatingCapacity}</span>
                 </div>
 
             </div>
-            <div className="flex gap-12 items-center">
+            <div className="flex justify-between items-center mr-5">
                 <div className="text-[14px] text-gray-400 font-bold m-6">
-                    <span className="text-[20px] text-black">${price}/ </span>day
+                    <span className="text-[20px] text-black">{pricePerDay} </span>
                 </div>
                 <button className="w-[110px] h-[40px] bg-[#3563E9] text-white rounded-[4px]">Rent Now</button>
             </div>
