@@ -42,10 +42,9 @@ const Card: React.FC<Car> = ({ name, brand, type, fuelCapacity, transmission, se
                     alt="car"
 
                 /> */}
-                {image && (
-                    <img src={urlFor(image).width(240).url()}
+                    <img src={urlFor(image).width(250).height(84).url()}
                     alt="Sanity image"/>
-                )}
+
 
                 <Image
                     src={Shadow}

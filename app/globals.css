@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .navContainer {
-    @apply max-w-[1440px] m-auto flex justify-between items-center h-[124px] border self-center
+    @apply max-w-[1440px] m-auto flex items-center h-[124px] border self-center justify-between
 }
 
 .navSection {
-    @apply flex justify-start px-6 py-4 items-center gap-5
+    @apply flex md:justify-start px-6 py-4 items-center gap-5
 }
 
 .logo {
@@ -20,4 +20,18 @@
 
 .menu {
     @apply flex justify-end px-10 py-4 gap-4
+}
+
+@media (max-width: 768px) {
+    .navContainer {
+        @apply flex-col h-auto py-4;
+    }
+
+    .navSection {
+        @apply w-full justify-between;
+    }
+
+    .menu {
+        @apply w-full justify-center mt-2;
+    }
 }
