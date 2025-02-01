@@ -17,7 +17,7 @@ export default async function Catalogue() {
     const recommendedCar = await client.fetch(recommendedCarQuery);
     return (
         <div>
-            <div className="flex justify-between mx-5 sm:mx-20 mt-10">
+            <div className="flex justify-between mx-8 sm:mx-20 mt-10">
                 <div className="font-medium text-gray-400">
                     Popular Car
                 </div>

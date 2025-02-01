@@ -6,9 +6,9 @@ import DropOffSVG from "@/public/icons/dropoff.svg"
 
 export const PickAndDrop = () => {
   return (
-    <section className='mx-6 sm:mx-16 flex flex-col sm:flex-row items-center justify-between'>
+    <section className='mx-6 sm:mx-16 flex flex-col sm:flex-row items-center justify-between relative'>
       {/* Pickup */}
-      <div className='w-[327px] sm:w-[582px] h-[120px] sm:h-[132px] bg-white rounded-[10px] relative my-10 sm:my-0'>
+      <div className='w-[327px] sm:w-[582px] h-[120px] sm:h-[132px] bg-white rounded-[10px] my-10 sm:my-0'>
         <div className='mx-4 sm:mx-10 pt-4 flex'>
           <Image
             src={PickUpSVG}
@@ -40,7 +40,7 @@ export const PickAndDrop = () => {
         </div>
       </div>
       {/* Switch */}
-      <button className='sm:relative sm:bottom-0 absolute bottom-64'>
+      <button className='sm:relative sm:bottom-0 absolute top-28'>
         <Image
           src={Switch}
           width={120}
