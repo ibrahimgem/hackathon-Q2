@@ -3,7 +3,7 @@ import ad1 from '@/public//ads/ad1.svg';
 import ad2 from '@/public//ads/ad2.svg';
 export default function Hero () {
     return (
-        <section className='sm:flex justify-between py-0 sm:py-10 sm:px-16 px-6 items-center'>
+        <section className='sm:flex mx-12 sm:mx-0 py-0 sm:py-10 sm:px-16 items-center sm:justify-between'>
             <div className='bg-[#54A6FF] w-[327px] sm:w-[630px] h-[232px] sm:h-[360px] my-1 rounded-[10px] relative'>
                 <div className='absolute p-3 sm:p-6 sm:text-[32px] text-white w-[350px] font-medium sm:font-semibold z-10 top-1 sm:top-0'>The Best Platform for Car Rental</div>
                 <div className='absolute p-3 pr-28 sm:p-6 text-[12px] sm:text-[16px] text-white w-[350px] top-11 sm:top-28 z-10'>Ease of doing a car rental safely and reliably. Of course at a low price.</div>
