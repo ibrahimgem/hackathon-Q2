@@ -25,7 +25,7 @@ export default async function Catalogue() {
                     View All
                 </div>
             </div>
-            <div className="mx-8 p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+            <div className="sm:mx-8 p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
                 {popularCar.map((car: any) => (
                     <CarCard
                         key={car.id}
@@ -47,7 +47,7 @@ export default async function Catalogue() {
                     Recommended Car
                 </div>
             </div>
-            <div className="mx-8 p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+            <div className="sm:mx-8 p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
                 {recommendedCar.map((car: any) => (
                     <CarCard
                         key={car.id}

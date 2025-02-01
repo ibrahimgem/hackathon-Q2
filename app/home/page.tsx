@@ -6,7 +6,7 @@ export default function App () {
     return (
         <div className="bg-[#F6F7F9] max-w-[1440px] m-auto">
         <Hero />
-        {/* <PickAndDrop /> */}
+        <PickAndDrop />
         <Catalogue />
         </div>
     )
