@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="min-h-[480px] m-auto">
             <div className="flex  justify-between">
                 <div className="m-20 flex flex-col gap-4">
-                    <div className="logo">
+                    <div className="mx-10 text-blue-600 font-bold text-3xl">
                         <Link href="/">
                             MORENT
                         </Link>
@@ -30,7 +30,7 @@ const Footer = () => {
                             Partnership
                         </li>
                         <li>
-                            Bussiness Relation
+                            Business Relation
                         </li>
                     </ul>
                     <ul className="text-gray-500 flex flex-col gap-6">

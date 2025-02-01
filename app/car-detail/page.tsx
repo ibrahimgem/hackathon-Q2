@@ -1,12 +1,11 @@
 import Catalogue from "../components/catalogue";
-import Hero from "../components/hero";
 import { PickAndDrop } from "../components/pickanddrop";
+import SideNavBar from "../components/side-navbar";
 
-export default function App () {
+export default function CarDetail () {
     return (
         <div className="bg-[#F6F7F9] max-w-[1440px] m-auto">
-        <Hero />
-        {/* <PickAndDrop /> */}
+        <PickAndDrop />
         <Catalogue />
         </div>
     )

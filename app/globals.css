@@ -2,36 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.navContainer {
-    @apply max-w-[1440px] m-auto flex items-center h-[124px] border self-center justify-between
-}
-
-.navSection {
-    @apply flex md:justify-start px-6 py-4 items-center gap-5
-}
-
-.logo {
-    @apply mx-10 text-blue-600 font-semibold text-3xl font-bold
-}
-
-.search {
-   @apply flex items-center border max-w-full rounded-3xl px-4 py-2
-}
-
-.menu {
-    @apply flex justify-end px-10 py-4 gap-4
-}
-
-@media (max-width: 768px) {
-    .navContainer {
-        @apply flex-col h-auto py-4;
-    }
-
-    .navSection {
-        @apply w-full justify-between;
-    }
-
-    .menu {
-        @apply w-full justify-center mt-2;
-    }
-}
