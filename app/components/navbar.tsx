@@ -9,7 +9,7 @@ import SettingSVG from "@/public/icons/setting.svg"
 
 export default function Navbar() {
     return (
-        <nav className="max-w-[1440px] m-auto flex items-center h-[124px] border flex-col justify-between">
+        <nav className="max-w-[1440px] m-auto flex items-center sm:h-[124px] border flex-col justify-between">
             <div className="flex m-auto w-full justify-between">
                 <div className="flex md:justify-start sm:px-6 py-4 items-center gap-5">
                     <div className="mx-10 text-blue-600 font-bold text-3xl">
@@ -90,7 +90,7 @@ export default function Navbar() {
                 </div>
             </div>
             {/* Search Mobile */}
-            <div className="flex gap-2">
+            <div className="flex gap-7">
                 <div className='sm:hidden flex items-center border w-[263px] rounded-md px-4 py-2'>
                     <Image
                         src={SearchSVG}
