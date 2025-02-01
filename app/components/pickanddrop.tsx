@@ -40,7 +40,7 @@ export const PickAndDrop = () => {
         </div>
       </div>
       {/* Switch */}
-      <button className='sm:relative sm:bottom-0 absolute top-28'>
+      <button className='sm:relative sm:bottom-0 absolute top-28 sm:top-0'>
         <Image
           src={Switch}
           width={120}

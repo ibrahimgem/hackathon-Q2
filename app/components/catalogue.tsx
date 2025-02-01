@@ -17,7 +17,7 @@ export default async function Catalogue() {
     const recommendedCar = await client.fetch(recommendedCarQuery);
     return (
         <div>
-            <div className="flex justify-between mx-8 sm:mx-20 mt-10">
+            <div className="flex justify-between mx-14 sm:mx-20 mt-10">
                 <div className="font-medium text-gray-400">
                     Popular Car
                 </div>
@@ -25,44 +25,48 @@ export default async function Catalogue() {
                     View All
                 </div>
             </div>
-            <div className="sm:mx-8 p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
-                {popularCar.map((car: any) => (
-                    <CarCard
-                        key={car.id}
-                        name={car.name}
-                        type={car.type}
-                        image={car.image}
-                        pricePerDay={car.pricePerDay}
-                        fuelCapacity={car.fuelCapacity}
-                        transmission={car.transmission}
-                        seatingCapacity={car.seatingCapacity}
-                        brand={car.brand}
-                        originalPrice={car.orignalPrice}
-                        tags={[]}
-                    />
-                ))}
+            <div className="flex justify-center py-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-sm">
+                    {popularCar.map((car: any) => (
+                        <CarCard
+                            key={car.id}
+                            name={car.name}
+                            type={car.type}
+                            image={car.image}
+                            pricePerDay={car.pricePerDay}
+                            fuelCapacity={car.fuelCapacity}
+                            transmission={car.transmission}
+                            seatingCapacity={car.seatingCapacity}
+                            brand={car.brand}
+                            originalPrice={car.orignalPrice}
+                            tags={[]}
+                        />
+                    ))}
+                </div>
             </div>
             <div className="flex justify-between mx-20 mt-10">
                 <div className="font-medium text-gray-400">
                     Recommended Car
                 </div>
             </div>
-            <div className="sm:mx-8 p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
-                {recommendedCar.map((car: any) => (
-                    <CarCard
-                        key={car.id}
-                        name={car.name}
-                        type={car.type}
-                        image={car.image}
-                        pricePerDay={car.pricePerDay}
-                        fuelCapacity={car.fuelCapacity}
-                        transmission={car.transmission}
-                        seatingCapacity={car.seatingCapacity}
-                        brand={car.brand}
-                        originalPrice={car.orignalPrice}
-                        tags={[]}
-                    />
-                ))}
+            <div className="flex justify-center py-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-sm">
+                    {recommendedCar.map((car: any) => (
+                        <CarCard
+                            key={car.id}
+                            name={car.name}
+                            type={car.type}
+                            image={car.image}
+                            pricePerDay={car.pricePerDay}
+                            fuelCapacity={car.fuelCapacity}
+                            transmission={car.transmission}
+                            seatingCapacity={car.seatingCapacity}
+                            brand={car.brand}
+                            originalPrice={car.orignalPrice}
+                            tags={[]}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     )
