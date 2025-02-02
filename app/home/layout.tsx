@@ -10,7 +10,7 @@ export default function HomeLayout ({
     <>
     <Navbar />
     {children}
-    {/* <Footer /> */}
+    <Footer />
     </>
   )
 }

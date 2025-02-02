@@ -30,13 +30,14 @@ export default function Navbar() {
                             className="max-w-full px-80 text-gray-500 text-sm outline-none pl-2"
                             placeholder="Search something here"
                         />
+                        <a href="/car-detail">
                         <Image
                             src={ToggleSVG}
                             width={24}
                             height={24}
                             alt="Toggle"
                         />
-
+                        </a>
                     </div>
                 </div>
                 {/*Menu Icons Section */}
@@ -90,8 +91,8 @@ export default function Navbar() {
                 </div>
             </div>
             {/* Search Mobile */}
-            <div className="flex gap-7">
-                <div className='sm:hidden flex items-center border w-[263px] rounded-lg px-4 py-2'>
+            <div className="flex gap-6">
+                <div className='sm:hidden flex items-center border w-60 rounded-lg px-4 py-2'>
                     <Image
                         src={SearchSVG}
                         width={24}
