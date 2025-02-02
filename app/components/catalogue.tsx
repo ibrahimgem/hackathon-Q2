@@ -68,6 +68,10 @@ export default async function Catalogue() {
                     ))}
                 </div>
             </div>
+            <div className="flex items-center justify-end py-20 px-12">
+                <button className="w-40 h-10 bg-[#3563E9] text-white rounded-md">Show more car</button>
+                <span className="pl-[33rem]">120 Car</span>
+            </div>
         </div>
     )
 }
