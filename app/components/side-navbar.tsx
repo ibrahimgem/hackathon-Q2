@@ -1,6 +1,6 @@
 export default function SideNavBar() {
     return (
-            <div className="ml-10 pt-10 px-5 min-w-80">
+            <div className="ml-10 pt-10 px-5">
                 <ul className="flex flex-col space-y-2">
                     <li>
                         <strong className="block text-xs font-medium uppercase text-gray-400"> Type </strong>

@@ -31,7 +31,7 @@ export const PickAndDrop = () => {
       {/* Switch */}
       <div className="relative w-full lg:h-40 flex justify-center items-center">
         <button className="absolute mt-12 lg:mb-10">
-          <img src="/Switch.svg" alt="switch" className="lg:w-32 lg:h-32 w-44 h-44" />
+          <img src="/Switch.svg" alt="switch" className="lg:w-32 lg:h-32 w-40 h-40" />
         </button>
       </div>
       {/* Drop off */}

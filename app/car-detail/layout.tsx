@@ -8,9 +8,9 @@ export default function CarDetailLayout ({
     children: React.ReactNode;
   }) {
   return (
-    <div>
+    <div className="max-w-[360rem]">
     <Navbar />
-    <div className="flex">
+    <div>
     <SideNavBar />
     {children}
     </div>

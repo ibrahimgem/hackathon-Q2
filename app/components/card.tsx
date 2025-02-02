@@ -45,8 +45,13 @@ const Card: React.FC<Car> = ({ name, brand, type, fuelCapacity, transmission, se
                     alt="car"
 
                 /> */}
-                    <img src={urlFor(image).width(250).height(84).url()}
-                    alt="Sanity image"/>
+                <div className="w-64 aspect-w-3 aspect-h-1">
+                    <img
+                        src={urlFor(image).url()}
+                        alt="Sanity image"
+                        className="object-cover w-full h-full"
+                    />
+                </div>
 
 
                 <Image
@@ -59,31 +64,31 @@ const Card: React.FC<Car> = ({ name, brand, type, fuelCapacity, transmission, se
             </div>
             <div className="flex justify-between mx-6">
                 <div className="flex items-center">
-                <Image
-                    src={FuelCapSVG}
-                    width={24}
-                    height={24}
-                    alt="Fuel Capacity"
+                    <Image
+                        src={FuelCapSVG}
+                        width={24}
+                        height={24}
+                        alt="Fuel Capacity"
                     />
                     <span className="px-1 text-gray-400">{fuelCapacity}</span>
                 </div>
                 <div className="flex items-center">
-                <Image
-                    src={TransmissionSVG}
-                    width={24}
-                    height={24}
-                    alt="Transmission"
+                    <Image
+                        src={TransmissionSVG}
+                        width={24}
+                        height={24}
+                        alt="Transmission"
                     />
-                    
+
                     <span className="px-1 text-gray-400">{transmission}</span>
                 </div>
                 <div className="flex items-center">
-                    
-                <Image
-                    src={SeatSVG}
-                    width={24}
-                    height={24}
-                    alt="Seat"
+
+                    <Image
+                        src={SeatSVG}
+                        width={24}
+                        height={24}
+                        alt="Seat"
                     />
 
                     <span className="px-1 text-gray-400">{seatingCapacity}</span>
