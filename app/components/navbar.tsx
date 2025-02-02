@@ -4,7 +4,7 @@ import Profil from "@/public/Profil.png"
 
 export default function Navbar() {
     return (
-        <nav className="max-w-[360rem] m-auto flex items-center sm:h-32 border flex-col justify-between pb-10 sm:pb-0">
+        <nav className="max-w-[90rem] m-auto flex items-center sm:h-32 border flex-col justify-between pb-10 sm:pb-0">
             <div className="flex m-auto w-full items-center justify-between">
                 <div className="flex md:justify-start sm:px-6 py-8 sm:py-4 items-center gap-5">
                     <div className="mx-5 sm:mx-10 text-blue-600 font-bold text-3xl">
@@ -65,6 +65,7 @@ export default function Navbar() {
                         className="max-w-full w-[123rem] flex-1 text-gray-500 text-sm outline-none pl-2"
                         placeholder="Search something here"
                     />
+
                 </div>
                 <div className="border w-12 rounded-lg flex items-center justify-center md:hidden">
                     <img src="/icons/toggle.svg" alt="Toggle for Mobile" className="w-6  h-6" />
